@@ -1,10 +1,8 @@
-# app
+# ssjjzs
 
-> A Vue.js project
+> A SSJJ Project
 
 ## Build Setup
-
-##made
 
 ``` bash
 # install dependencies
