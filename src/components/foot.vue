@@ -14,19 +14,19 @@
 		data(){
 			return {
 				items:[{
-					url:'/zx',
+					url:'/zixun',
 					icon_src:'../../static/images/footer_icon_zx.png',
 					title:'资讯'
 				},{
-					url:'/zc',
+					url:'/zhanchang',
 					icon_src:'../../static/images/footer_icon_zc.png',
 					title:'战场'
 				},{
-					url:'/ss',
+					url:'/saisi',
 					icon_src:'../../static/images/footer_icon_ss.png',
 					title:'赛事'
 				},{
-					url:'/zb',
+					url:'/zhibo',
 					icon_src:'../../static/images/footer_icon_zb.png',
 					title:'直播'
 				}]
