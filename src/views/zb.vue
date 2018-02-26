@@ -1,8 +1,15 @@
 <template>
-	<h1>zb</h1>
+	<div>
+		<h1>zb</h1>
+		<foot/>
+	</div>
 </template>
 <script>
+import foot from '../components/foot'
 	export default{
-		name:'Zb'
+		name:'Zb',
+		components:{
+			foot
+		}
 	}
 </script>
