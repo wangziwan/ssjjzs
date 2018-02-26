@@ -1,9 +1,13 @@
-
 <template>
-  <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-
-    <router-view/>
+  <div>
+    <transition name="router-fade" mode="out-in">
+        <keep-alive>
+            <router-view v-if="$route.meta.keepAlive"></router-view>
+        </keep-alive>
+    </transition>
+    <transition name="router-fade" mode="out-in">
+        <router-view v-if="!$route.meta.keepAlive"></router-view>
+    </transition>
     <foot />
   </div>
 </template>
@@ -12,20 +16,20 @@
 import foot from './components/foot'
 
 export default {
-  name: 'App',
-  components:{
-    foot
-  }
+    components:{
+        foot
+    }
 }
+
 </script>
 
 <style>
-#app {
+/*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
    margin-top: 1.32rem; 
-}
+}*/
 </style>
