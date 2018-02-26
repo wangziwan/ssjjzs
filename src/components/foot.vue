@@ -22,7 +22,7 @@
 					icon_src:'../../static/images/footer_icon_zc.png',
 					title:'战场'
 				},{
-					url:'/saisi',
+					url:'/saishi',
 					icon_src:'../../static/images/footer_icon_ss.png',
 					title:'赛事'
 				},{
@@ -45,10 +45,11 @@
 		background: url("../../static/images/footer_bg.jpg") no-repeat center top;
 		background-size: cover;
 		display: flex;
-		& li{
+
+	}
+		.footer li:not(:first-child){
 			background:black;
 		}
-	}
 		.footer li{
 			flex: 1;
 			display: flex;
