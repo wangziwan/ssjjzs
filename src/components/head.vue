@@ -3,12 +3,8 @@
 </template>
 <script>
 </script>
-<style scoped lang='less'>
+<style scoped>
 	h1{
-		position:fixed;
-		left:0;
-		top:0;
-		z-index:99;
 		width:100%;
 		height:1.32rem;
 		background: url("../../static/images/footer_bg.jpg") no-repeat center top;

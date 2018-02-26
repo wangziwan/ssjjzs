@@ -14,19 +14,19 @@
 		data(){
 			return {
 				items:[{
-					url:'/zx',
+					url:'/zixun',
 					icon_src:'../../static/images/footer_icon_zx.png',
 					title:'资讯'
 				},{
-					url:'/zc',
+					url:'/zhanchang',
 					icon_src:'../../static/images/footer_icon_zc.png',
 					title:'战场'
 				},{
-					url:'/ss',
+					url:'/saishi',
 					icon_src:'../../static/images/footer_icon_ss.png',
 					title:'赛事'
 				},{
-					url:'/zb',
+					url:'/zhibo',
 					icon_src:'../../static/images/footer_icon_zb.png',
 					title:'直播'
 				}]
@@ -45,10 +45,11 @@
 		background: url("../../static/images/footer_bg.jpg") no-repeat center top;
 		background-size: cover;
 		display: flex;
-		& li{
+
+	}
+		.footer li:not(:first-child){
 			background:black;
 		}
-	}
 		.footer li{
 			flex: 1;
 			display: flex;
