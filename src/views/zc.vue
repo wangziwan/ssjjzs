@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<h1>zc</h1>
-		<foot/>
 	</div>
 </template>
 <script>
