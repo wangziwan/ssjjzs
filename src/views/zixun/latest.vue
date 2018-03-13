@@ -88,7 +88,7 @@
 </style>
 <script>
 	import swiperSlider from '../../components/SwiperSlide.vue';
-	import {getData} from '../../config/getData.js';
+	import {fetch} from '../../config/fetch.js';
 	import Axios from 'axios';
 	export default {
 		components:{
@@ -107,7 +107,7 @@
 		},
 		mounted(){
 			//轮播图数据
-			getData('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
+			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
 			.then((response)=>{
 				this.option.slideArr=response.data.data;
 			})
@@ -115,7 +115,7 @@
 				console.log(response);
 			}),
 			//资讯内容加载
-			getData('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
+			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
 			.then((response)=>{
 				this.contents=response.data.data;
 			})
@@ -129,7 +129,7 @@
 					return;
 				}
 				this.preventRepeatReuqest=true;
-				getData('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
+				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
 				.then((response)=>{
 					this.contents.push(...response.data.data);
 					this.preventRepeatReuqest=false;
