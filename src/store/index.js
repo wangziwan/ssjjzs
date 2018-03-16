@@ -12,6 +12,7 @@ const state={
 	},//用户信息
 	comments:{},//用户评论
 	zixunStatus:0,
+	strategyStatus:0,
 }
 export default new Vuex.Store({
 	state,

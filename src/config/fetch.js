@@ -1,5 +1,5 @@
 import Axios from 'axios';
-var getData=function(method='GET',url='',data={},sucCb,failCb){
+var fetch=function(method='GET',url='',data={},sucCb,failCb){
 	return Axios({
 		method: method,
 		url: url,
@@ -9,5 +9,5 @@ var getData=function(method='GET',url='',data={},sucCb,failCb){
 	.catch(failCb);
 }
 export {
-	getData
+	fetch
 }

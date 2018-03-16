@@ -13,12 +13,15 @@ Vue.use(VueRouter)
 const router=new VueRouter({
 	routes,
 	scrollBehavior(to,from,savePosition) {
-		if(savePosition) {
+		/*console.log(to,from,savePosition);*/
+		if(savePosition) {//通过浏览器后退前进按钮才触发
 			return savePosition
 		} else {
 			if(from.meta.keepAlive) {
-				from.meta.savePosition = documment.body.scrollTop;
+				//记录之前路由页面滚动的位置
+				from.meta.savePosition = document.body.scrollTop;
 			}
+			//新页面需要滚动到的位置
 			return {x:0,y:to.meta.savePosition || 0}
 		}
 	}

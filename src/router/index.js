@@ -13,6 +13,21 @@ const comicList = r => require.ensure([],() => r(require('@/views/zixun/comicLis
 const comicDetail = r => require.ensure([],() => r(require('@/views/zixun/comicDetail')),'comicDetail');
 const detail = r => require.ensure([],() => r(require('@/views/detail')),'detail');
 const zhanchang = r => require.ensure([],() => r(require('@/views/zc')),'zhanchang');
+const armoury = r => require.ensure([],() => r(require('@/views/zhanchang/armoury')),'armoury');
+const armouryAll = r => require.ensure([],() => r(require('@/views/zhanchang/armouryAll')),'armouryAll');
+const armouryChoose = r => require.ensure([],() => r(require('@/views/zhanchang/armouryChoose')),'armouryChoose');
+const character = r => require.ensure([],() => r(require('@/views/zhanchang/character')),'character');
+const characterDetail = r => require.ensure([],() => r(require('@/views/zhanchang/characterDetail')),'characterDetail');
+const map = r => require.ensure([],() => r(require('@/views/zhanchang/map')),'map');
+const mapDetail = r => require.ensure([],() => r(require('@/views/zhanchang/mapDetail')),'mapDetail');
+const rank = r => require.ensure([],() => r(require('@/views/zhanchang/rank')),'rank');
+const strategy = r => require.ensure([],() => r(require('@/views/zhanchang/strategy')),'strategy');
+const strategies = r => require.ensure([],() => r(require('@/views/zhanchang/strategies')),'strategies');
+/*const gsjj = r => require.ensure([],() => r(require('@/views/zhanchang/gsjj')),'gsjj');
+const djjx = r => require.ensure([],() => r(require('@/views/zhanchang/djjx')),'djjx');
+const wjxd = r => require.ensure([],() => r(require('@/views/zhanchang/wjxd')),'wjxd');*/
+const nearby = r => require.ensure([],() => r(require('@/views/zhanchang/nearby')),'nearby');
+const activity = r => require.ensure([],() => r(require('@/views/zhanchang/activity')),'activity');
 const saishi = r => require.ensure([],() => r(require('@/views/ss')),'saishi');
 const zhibo = r => require.ensure([],() => r(require('@/views/zb')),'zhibo');
 /*import zixun from '@/views/zx'
@@ -51,7 +66,8 @@ export default [{
         component: zixun,
         children:[{
           path:'latest',
-          component:latest
+          component:latest,
+          meta:{keepAlive:true}
         },{
           path:'news',
           component:news
@@ -71,6 +87,45 @@ export default [{
       },{
         path: 'zhanchang',
         component: zhanchang
+      },{
+        path: 'zhanchang/armoury',
+        component: armoury,
+        children:[{
+          path:'all',
+          component:armouryAll
+        },{
+          path:'choose',
+          component:armouryChoose
+        }]
+      },{
+          path:'zhanchang/character',
+          component:character
+      },{
+          path:'zhanchang/character/:id',
+          component:characterDetail
+      },{
+          path:'zhanchang/map',
+          component:map
+      },{
+          path:'zhanchang/map/:id',
+          component:mapDetail
+      },{
+          path:'zhanchang/rank',
+          component:rank
+      },{
+          path:'zhanchang/strategy',
+          component:strategy,
+/*          children:[{
+            path:':id',
+            component:strategies,
+            meta:{keepAlive:true}
+          }]*/
+      },{
+        path: '/zhanchang/nearby',
+        component: nearby
+      },{
+        path: '/zhanchang/activity',
+        component: activity
       },{
         path: 'saishi',
         component: saishi
