@@ -1,21 +1,21 @@
 <template>
 	<div class="activity">
-		<header>
-			<a class="iconfont icon-back" @click="gotoBack"></a>
-			<h1>游戏活动</h1>
-		</header>
+		<child-title :title='title'></child-title>
 		<list :option="options"></list>
 	</div>
 </template>
 <script>
 	import list from '../../components/list.vue'
 	import {fetch} from '../../config/fetch.js'
+	import childTitle from '../../components/childTitle'
 	export default{
 		components:{
+			childTitle,
 			list
 		},
 		data(){
 			return {
+				title:'游戏活动',
 				options:[],
 			}
 		},
@@ -42,33 +42,7 @@
 		height:@line;
 		border-radius:@line/2;
 	}
-	header{
-		width:100%;
-		height:1.32rem;
-		background: url("../../../static/images/footer_bg.jpg") no-repeat center top;
-		background-size: cover;
-		font-size:0.48rem;
-		line-height:1.32rem;
-		color:#fff;
-		text-align:center;
-		display:flex;
-		& a{
-			flex:1;
-			font-size:0.48rem;
-			display:flex;
-			justify-content:center;
-			&.goBack{
-				flex:1;
-			}
-		}
-		& h1{
-			flex:6;
-		}
-		&:after{
-			content:"";
-			flex:1;
-		}
-	}
+
 	.activity{
 		padding-bottom:1.32rem;
 	}

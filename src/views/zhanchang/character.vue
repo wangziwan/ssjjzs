@@ -1,9 +1,6 @@
 <template>
 	<div class="character">
-		<header>
-			<a class="iconfont icon-back" @click="gotoBack"></a>
-			<h1>角色</h1>
-		</header>
+		<child-title :title='title'></child-title>
 		<div class="search">
 			<div class="searchTop">
 				<button @click="isShowMenu">分类检索</button>
@@ -33,9 +30,14 @@
 </template>
 <script>
 	import {fetch} from '../../config/fetch.js'
+	import childTitle from '../../components/childTitle'
 	export default {
+		components:{
+			childTitle
+		},
 		data(){
 			return {
+				title:'角色',
 				isShow:false,
 				typesActiveId:null,		
 				types:[{

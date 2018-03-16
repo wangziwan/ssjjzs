@@ -1,9 +1,6 @@
 <template>
 	<div class="strategy">
-		<header>
-			<a class="iconfont icon-back" @click="gotoBack"></a>
-			<h1>游戏攻略</h1>
-		</header>
+		<child-title :title='title'></child-title>
 		<ul class="strategy_tab">
 			<li v-for='(item,index) in items'>
 				<a @click="tab_getData(index)" :class="{active:index==strategyStatus}">{{item.tab}}</a>
@@ -19,12 +16,15 @@
 import {mapState,mapMutations} from 'vuex'
 import {fetch} from '../../config/fetch.js'
 import list from '../../components/list'
+import childTitle from '../../components/childTitle'
 	export default{
 		components:{
+			childTitle,
 			list
 		},
 		data(){
 			return{
+				title:'游戏攻略',
 				items:[{
 					tab:'新手必看',
 					url:'/zhanchang/strategy/0'
@@ -50,7 +50,6 @@ import list from '../../components/list'
 			fetch('GET',`https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/strategy/${this.strategyStatus}`)
 			.then((response)=>{
 				this.options['strategy'+this.strategyStatus]=response.data.data;
-				console.log(this.options);
 			})
 			.catch((response)=>{
 				console.log(response);
@@ -76,7 +75,6 @@ import list from '../../components/list'
         			fetch('GET',`https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/strategy/${index}`)
 					.then((response)=>{
 						this.options['strategy'+index]=response.data.data;
-						console.log(this.options);
 					})
 					.catch((response)=>{
 						console.log(response);
@@ -113,33 +111,6 @@ import list from '../../components/list'
 					background-size: contain;
 				}
 			}
-		}
-	}
-	header{
-		width:100%;
-		height:1.32rem;
-		background: url("../../../static/images/footer_bg.jpg") no-repeat center top;
-		background-size: cover;
-		font-size:0.48rem;
-		line-height:1.32rem;
-		color:#fff;
-		text-align:center;
-		display:flex;
-		& a{
-			flex:1;
-			font-size:0.48rem;
-			display:flex;
-			justify-content:center;
-			&.goBack{
-				flex:1;
-			}
-		}
-		& h1{
-			flex:6;
-		}
-		&:after{
-			content:"";
-			flex:1;
 		}
 	}
 </style>

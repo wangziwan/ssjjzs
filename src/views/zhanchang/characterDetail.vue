@@ -1,9 +1,6 @@
 <template>
 	<div class="characterDetail">
-		<header>
-			<a class="iconfont icon-back" @click="gotoBack"></a>
-			<h1>角色</h1>
-		</header>
+		<child-title :title='title'></child-title>
 		<div class="img">
 			<img :src="item.img" alt="">
 			<h4>{{item.title}}</h4>
@@ -30,9 +27,14 @@
 </template>
 <script>
 	import {fetch} from '../../config/fetch.js'
+	import childTitle from '../../components/childTitle.vue'
 	export default {
+		components:{
+			childTitle
+		},
 		data(){
 			return {
+				title:'角色',
 				item:{
 					img:'../../../static/images/zhanchang/character.jpg',
 					title:'瑞秋',
@@ -60,33 +62,6 @@
 	font-size:@font;
 	line-height:@line;
 }
-	header{
-		width:100%;
-		height:1.32rem;
-		background: url("../../../static/images/footer_bg.jpg") no-repeat center top;
-		background-size: cover;
-		font-size:0.48rem;
-		line-height:1.32rem;
-		color:#fff;
-		text-align:center;
-		display:flex;
-		& a{
-			flex:1;
-			font-size:0.48rem;
-			display:flex;
-			justify-content:center;
-			&.goBack{
-				flex:1;
-			}
-		}
-		& h1{
-			flex:6;
-		}
-		&:after{
-			content:"";
-			flex:1;
-		}
-	}
 .characterDetail{
 	padding-bottom:1.32rem;
 	color:#333;	

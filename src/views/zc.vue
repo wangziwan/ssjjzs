@@ -127,7 +127,7 @@
 					},{
 						icon:'../../static/images/zhanchang/icon_forum.png',
 						title:'官方论坛',
-						url:'/zhanchang/forum'
+						/*url:'/zhanchang/forum'*/
 					},{
 						icon:'../../static/images/zhanchang/icon_nearby.png',
 						title:'附近战友',
@@ -136,7 +136,7 @@
 					intoGame:[{
 						icon:'../../static/images/zhanchang/icon_download.png',
 						title:'游戏下载',
-						url:'/zhanchang/download'
+						/*url:'/zhanchang/download'*/
 					},{
 						icon:'../../static/images/zhanchang/icon_activity.png',
 						title:'游戏活动',
