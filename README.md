@@ -4,22 +4,22 @@
 
 ## 项目运行
 
-## clone项目，建议使用 node 6 稳定版
-`
+###### clone项目，建议使用 node 6 稳定版
+``` bash
 git clone https://github.com/wangziwan/ssjjzs.git
 cd ssjjzs
 npm install
-`
+end
 
-## 编译环境
-`
+###### 编译环境
+``` bash
 npm run dev
 访问 http://localhost:8088
-`
+end
 
-## 线上版本
-`
+###### 线上版本
+
 ``` bash
 npm run build
-`
+end
 
