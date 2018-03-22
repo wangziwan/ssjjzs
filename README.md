@@ -2,29 +2,19 @@
 
 > A SSJJ Project
 
-## Build Setup
+## 项目运行
 
 ``` bash
-# install dependencies
+# 建议使用 node 6 稳定版
+git clone https://github.com/wangziwan/ssjjzs.git
+cd ssjjzs
 npm install
 
-# serve with hot reload at localhost:8080
+# 编译环境
 npm run dev
+访问 http://localhost:8088
 
-# build for production with minification
+# 线上版本
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
