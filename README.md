@@ -1,25 +1,28 @@
 # 生死狙击助手项目
-===================================
-
 > A SSJJ Project
 
-##技术栈
-————————————————————————————————————————————
+## 技术栈
 vue2 + vuex + vue-router + webpack + ES6/7 + axios + sass + flex + esay-mock
 
 ## 项目运行
 
 ### clone项目，建议使用 node 6 稳定版
-`git clone https://github.com/wangziwan/ssjjzs.git`
-`cd ssjjzs`
-`npm install`
+```bash
+git clone https://github.com/wangziwan/ssjjzs.git 
+cd ssjjzs 
+npm install
+````
 
 ### 编译环境
-`npm run dev`
-`访问 http://localhost:8088`
+```bash
+npm run dev
+访问 http://localhost:8088
+````
 
 ## 线上版本
-`npm run build`
+```bash
+npm run build
+````
 
 ## 说明
 待添加
