@@ -1,30 +1,46 @@
-# ssjjzs
-
+# 生死狙击助手项目
 > A SSJJ Project
 
-## Build Setup
+## 技术栈
+vue2 + vuex + vue-router + webpack + ES6/7 + axios + sass + flex + esay-mock
 
-``` bash
-# install dependencies
+## 项目运行
+
+#### clone项目，建议使用 node 6 稳定版
+```bash
+git clone https://github.com/wangziwan/ssjjzs.git 
+
+cd ssjjzs 
+
 npm install
+````
 
-# serve with hot reload at localhost:8080
+#### 编译环境
+```bash
 npm run dev
 
-# build for production with minification
+访问 http://localhost:8088
+````
+
+#### 线上版本
+```bash
 npm run build
+````
 
-# build for production and view the bundle analyzer report
-npm run build --report
+#### 说明
+待添加
 
-# run unit tests
-npm run unit
+#### 项目截图
+待添加
 
-# run e2e tests
-npm run e2e
+#### 项目演示二维码
+待添加
 
-# run all tests
-npm test
-```
+#### 项目功能说明
+待添加
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### 项目文件结构
+待添加
+
+#### 总结
+待添加
