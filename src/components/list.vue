@@ -28,9 +28,6 @@
 			}
 		},
 		props:['option'],
-		computed:{
-			...mapState(['strategyStatus'])
-		},
 		watch:{
 			option:function(newVal,oldVal){				
 				this.contents=newVal;

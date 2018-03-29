@@ -62,10 +62,6 @@ import childTitle from '../../components/childTitle'
 			...mapMutations([
 				'RECORD_STRATEGYSTATUS'
 			]),
-        	gotoAddress(path,index){
-        		this.RECORD_STRATEGYSTATUS(index);
-        		this.$router.push(path);
-        	},
         	gotoBack(){
         		this.$router.go(-1);
         	},

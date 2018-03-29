@@ -33,6 +33,11 @@
 					icon_hov_src:'../../static/images/footer_icon_hov_zb.png',
 					icon_src:'../../static/images/footer_icon_zb.png',
 					title:'直播'
+				},{
+					url:'/me',
+					icon_hov_src:'../../static/images/footer_icon_hov_wd.png',
+					icon_src:'../../static/images/footer_icon_wd.png',
+					title:'我的'
 				}],
 				activeId:null
 			}
