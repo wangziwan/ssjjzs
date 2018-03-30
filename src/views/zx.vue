@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="zixun">
 		<headTitle></headTitle>
 		<ul class="zixun_tab">
 			<li v-for='(item,index) in items'>
@@ -54,6 +54,9 @@ import {mapState,mapMutations} from 'vuex';
 	}
 </script>
 <style scoped lang='less'>
+	.zixun{
+		padding-bottom:1.32rem;
+	}
 	.zixun_tab{
 		width: 100%;
 		display: flex;

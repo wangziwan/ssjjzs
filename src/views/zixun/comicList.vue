@@ -11,7 +11,7 @@
 	</dl>
 </template>
 <script>
-	import {getData} from '../../config/getData.js'
+	import {fetch} from '../../config/fetch.js'
 	export default {
 		data(){
 			return {
@@ -25,7 +25,7 @@
 		},
 		methods:{
 			getNovelList(){
-				getData('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/novelList/'+this.$route.params.id)
+				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/novelList/'+this.$route.params.id)
 				.then((response)=>{
 					this.items=response.data.data;
 				})

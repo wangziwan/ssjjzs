@@ -6,7 +6,7 @@
 </template>
 <script>
 	import swiperSlider from '../../components/SwiperSlide.vue';
-	import {getData} from '../../config/getData.js';
+	import {fetch} from '../../config/fetch.js';
 	export default {
 		components:{
 			swiperSlider
@@ -34,7 +34,7 @@
 		},
 		mounted(){
 			//轮播图数据
-/*			getData('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
+/*			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
 			.then((response)=>{
 				this.option.slideArr=response.data.data;
 			})
