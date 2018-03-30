@@ -1,12 +1,14 @@
 <template>
-	<div class="novelDetail">
-		<header>
-			<a class="iconfont icon-back" @click="gotoBack"></a>
-			<h1>生死狙击</h1>
-		</header>
-		<div class="content">
-			{{content}}
-		</div>
+	<div class="comicDetail">
+<!-- 		<header>
+	<a class="iconfont icon-back" @click="gotoBack"></a>
+	<h1>生死狙击</h1>
+</header> -->
+		<ul class="content">
+			<li v-for="(item,index) in items">
+				<img :src="item" alt="">
+			</li>
+		</ul>
 	</div>
 </template>
 <script>
@@ -14,14 +16,14 @@
 	export default {
 		data(){
 			return {
-				content:null
+				items:[]
 			}
 		},
 		mounted(){
 			//加载资讯内容
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/novel/'+this.$route.params.id+'/'+this.$route.params.chapterId)
+			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/comic/'+this.$route.params.id+'/'+this.$route.params.chapterId)
 			.then((response)=>{
-				this.content=response.data.data;
+				this.items=response.data.data;
 			})
 			.catch((reject)=>{
 				console.log(reject);
@@ -35,7 +37,8 @@
 	}
 </script>
 <style scoped lang='less'>
-	.novelDetail{
+	.comicDetail{
+		background:#000;
 		& header{
 			position:fixed;
 			left:0;
@@ -67,17 +70,25 @@
 			}
 		}
 		& .content{
-			padding:1.32rem 0.28rem 0;
-			font-size:14px;
-			line-height:24px;
-		}
-		[data-dpr="2"] & .content{
-			font-size:28px;
-			line-height:50px;
-		}
-		[data-dpr="3"] & .content{
-			font-size:42px;
-			line-height:72px;
+			padding:0.16rem 0.28rem 0;
+			display:flex;
+			justify-content:space-between;
+			flex-flow:row wrap;
+			& li{
+				width:50%;
+				padding-bottom:0.16rem;
+				box-sizing:border-box;
+				&:nth-child(odd){
+					padding-right:0.08rem;
+				}
+				&:nth-child(even){
+					padding-left:0.08rem;
+				}
+				& img{
+					display:block;
+					width:100%;
+				}
+			}
 		}
 	}
 </style>

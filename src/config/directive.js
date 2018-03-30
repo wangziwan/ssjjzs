@@ -38,7 +38,7 @@ Vue.directive('load-more',{
 		},false);
 		el.addEventListener('touchmove',()=>{
 /*			console.log(el.clientHeight)*/
-			if(oldScrollTop<scrollEl.scrollTop){//避免:拖动页面不放且拖动距离小于上一次请求结束后的最大scrollTop，重复执行函数
+			if(oldScrollTop<=scrollEl.scrollTop){//避免:拖动页面不放且拖动距离小于上一次请求结束后的最大scrollTop，重复执行函数
 				loadMore();
 			}
 		

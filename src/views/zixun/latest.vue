@@ -105,7 +105,7 @@
 
 			}
 		},
-		mounted(){
+		created(){
 			//轮播图数据
 			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
 			.then((response)=>{
@@ -122,6 +122,9 @@
 			.catch((response)=>{
 				console.log(response);
 			})
+		},
+		mounted(){
+
 		},
 		methods:{
 			loadMore(){
