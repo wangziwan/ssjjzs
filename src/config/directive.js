@@ -15,14 +15,16 @@ Vue.directive('load-more',{
 		let oldScrollTop =0;//执行binding.value函数时最大滚动距离
 		let height;
 		let timer;
+		let moveFlag=true;//解决加载多次问题
 		const loadMore=()=>{
-			if(scrollEl.scrollTop+screenH>height-20){
+			if(scrollEl.scrollTop+screenH >= height){
 				binding.value();//自定义指令绑定的内容
 				oldScrollTop = scrollEl.scrollTop;
 			}			
 		}
+
 		const moveEnd=()=>{
-/*			timer=requestAnimationFrame(()=>{
+			/*	timer=requestAnimationFrame(()=>{
 				if(oldScrollTop!=scrollEl.scrollTop){
 					oldScrollTop=scrollEl.scrollTop;
 				}else{
@@ -36,15 +38,19 @@ Vue.directive('load-more',{
 		el.addEventListener('touchstart',()=>{
 			height=scrollEl.offsetHeight;
 		},false);
+
 		el.addEventListener('touchmove',()=>{
-/*			console.log(el.clientHeight)*/
-			if(oldScrollTop<=scrollEl.scrollTop){//避免:拖动页面不放且拖动距离小于上一次请求结束后的最大scrollTop，重复执行函数
-				loadMore();
+			if(moveFlag){
+				if(oldScrollTop<scrollEl.scrollTop){//避免:拖动页面不放且拖动距离小于上一次请求结束后的最大scrollTop，重复执行函数
+					loadMore();
+					moveFlag=false;
+				}
 			}
-		
 		},false);
+		
 		el.addEventListener('touchend',()=>{
 			moveEnd();
+			moveFlag=true;
 		},false)
 	}
 })
