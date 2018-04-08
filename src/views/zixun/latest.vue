@@ -1,34 +1,107 @@
 <template>
 	<div>
-		<swiper-slider :options='option'></swiper-slider>
-<!-- 		<input type="text" v-focus /> -->
-		<ul class="content" v-load-more="loadMore">
-			<li v-for="(content,index) in contents" v-if="index<=3">
-				<div class="img">
-					<img :src="content.image" alt="">	
-				</div>
-				
-				<div class="info">
-					<a @click="gotoAddress({path:`/detail/${content.id}`})">{{content.title}}</a>
-					<span>{{content.date}}</span>					
-				</div>
-			</li>
-			<li class="append"><img src="../../../static/images/zixun_tab_bg.png" alt=""></li>
-			<li v-for="(content,index) in contents" v-if="index>3">
-				<div class="img">
-					<img :src="content.image" alt="">	
-				</div>				
-				<div class="info">
-					<a @click="gotoAddress({path:`/detail/${content.id}`})">{{content.title}}</a>
-					<span>{{content.date}}</span>					
-				</div>
-			</li>
-		</ul>
-		<footer v-show="preventRepeatReuqest">
-			正在加载更多内容...
-		</footer>
+		<load v-show="loadFlag"></load>
+		<div v-show="!loadFlag">
+			<swiper-slider :options='option'></swiper-slider>
+			<ul class="content" v-load-more="loadMore">
+				<li v-for="(content,index) in contents" v-if="index<=3">
+					<div class="img">
+						<img :src="content.imgUrl" alt="">	
+					</div>
+					
+					<div class="info">
+						<a @click="gotoAddress({path:`/detail/${content.id}`})">{{content.title}}</a>
+						<span>{{content.date}}</span>					
+					</div>
+				</li>
+				<li v-for="(content,index) in adBanners" class="append"><img :src='content.imgUrl' alt=""></li>
+				<li v-for="(content,index) in contents" v-if="index>3">
+					<div class="img">
+						<img :src="content.imgUrl" alt="">	
+					</div>				
+					<div class="info">
+						<a @click="gotoAddress({path:`/detail/${content.id}`})">{{content.title}}</a>
+						<span>{{content.date}}</span>					
+					</div>
+				</li>
+			</ul>
+			<footer v-show="preventRepeatReuqest">
+				<svg v-show="haveData" class="icon-audio">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-audio"></use>
+				</svg>
+			</footer>
+			<footer>
+				<span v-show="!haveData">------我是有底线的-------</span>
+			</footer>
+		</div>
 	</div>
 </template>
+
+<script>
+	import load from '../../components/loading.vue';
+	import swiperSlider from '../../components/SwiperSlide.vue';
+	import {fetch} from '../../config/fetch.js';
+	import Axios from 'axios';
+	export default {
+		components:{
+			swiperSlider,
+			load
+		},
+		data(){
+			return {
+				option:{
+					baseUrl:'/detail/',
+					slideArr:[]
+				},//轮播图参数配置
+				contents:[],//最新内容
+				adBanners:[],
+				preventRepeatReuqest: false, //到达底部加载数据，防止重复加载
+				haveData:true,
+				loadFlag:true
+			}
+		},
+		created(){
+			fetch('get','zxLatest').then((res)=>{
+				this.loadFlag = false;
+				//资讯内容加载
+				this.contents = res.data.zuixinContent;
+				//轮播图数据
+				this.option.slideArr = res.data.slide;
+				this.adBanners = res.data.adBanner;
+			}).catch((res)=>{
+				console.log(res);
+			})
+		},
+		mounted(){
+
+		},
+		methods:{
+			loadMore(){
+				console.log('loadmore!!')
+				if(this.preventRepeatReuqest){
+					return;
+				}
+				this.preventRepeatReuqest=true;
+				fetch('get','zuixinContent').then((res)=>{
+					if(res.data == [] || res.data == '') {
+						this.haveData = false;
+					} else {
+						this.haveData = true;
+						this.contents.push(...res.data);						
+					}
+					this.preventRepeatReuqest=false;				
+				}).catch((reject)=>{
+					this.preventRepeatReuqest=false;
+				})
+				
+			},
+        	gotoAddress(path,index){
+        		this.$router.push(path);
+        		this.activeId=index;
+        	}
+		}
+	}
+</script>
 <style scoped lang="less">
 	footer{
 		width:100%;
@@ -86,67 +159,3 @@
 		}
 	}
 </style>
-<script>
-	import swiperSlider from '../../components/SwiperSlide.vue';
-	import {fetch} from '../../config/fetch.js';
-	import Axios from 'axios';
-	export default {
-		components:{
-			swiperSlider
-		},
-		data(){
-			return {
-				option:{
-					baseUrl:'/detail/',
-					slideArr:[]
-				},//轮播图参数配置
-				contents:[],//最新内容
-				preventRepeatReuqest: false, //到达底部加载数据，防止重复加载
-
-			}
-		},
-		created(){
-			//轮播图数据
-			fetch('GET','slide')
-			.then((response)=>{
-				this.option.slideArr=response.data.data;
-			})
-			.catch((response)=>{
-				console.log(response);
-			}),
-			//资讯内容加载
-			fetch('GET','zuixinContent')
-			.then((response)=>{
-				this.contents=response.data.data;
-			})
-			.catch((response)=>{
-				console.log(response);
-			})
-		},
-		mounted(){
-
-		},
-		methods:{
-			loadMore(){
-				if(this.preventRepeatReuqest){
-					return;
-				}
-				this.preventRepeatReuqest=true;
-				fetch('GET','zuixinContent')
-				.then((response)=>{
-					this.contents.push(...response.data.data);
-					this.preventRepeatReuqest=false;
-				})
-				.catch((reject)=>{
-					console.log(reject);
-					this.preventRepeatReuqest=false;
-				})
-				console.log('loadmore')
-			},
-        	gotoAddress(path,index){
-        		this.$router.push(path);
-        		this.activeId=index;
-        	}
-		}
-	}
-</script>
