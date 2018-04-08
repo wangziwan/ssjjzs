@@ -34,7 +34,7 @@
 		},
 		mounted(){
 			//轮播图数据
-/*			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
+/*			fetch('GET','slide')
 			.then((response)=>{
 				this.option.slideArr=response.data.data;
 			})

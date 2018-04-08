@@ -48,7 +48,7 @@
 			...mapState(['userInfo'])
 		},
 		mounted(){
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/scoreMall')
+			fetch('GET','scoreMall')
 			.then((response)=>{
 				this.items=response.data.data;
 			})

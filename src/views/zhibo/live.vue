@@ -22,7 +22,7 @@
 			}
 		},
 		mounted(){
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zhibo/live')
+			fetch('GET','zhibo/live')
 			.then((response)=>{
 				this.options=response.data.data;
 			})

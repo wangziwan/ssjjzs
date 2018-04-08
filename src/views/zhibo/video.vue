@@ -53,14 +53,14 @@
 			}
 		},
 		mounted(){
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zhibo/live')
+			fetch('GET','zhibo/live')
 			.then((response)=>{
 				this.contents=response.data.data.slice(0,2);
 			})
 			.catch((response)=>{
 				console.log(response);
 			}),
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zhibo/videoAnchor')
+			fetch('GET','zhibo/videoAnchor')
 			.then((response)=>{
 				this.items=response.data.data;
 			})

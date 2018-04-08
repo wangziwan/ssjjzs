@@ -61,7 +61,7 @@
 		mounted(){
 			console.log(this.$route);
 			//加载资讯内容
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/detail/'+this.$route.params.id+'/content')
+			fetch('GET','detail/'+this.$route.params.id+'/content')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.content=response.data.data;
@@ -70,7 +70,7 @@
 				console.log(reject);
 			}),
 			//加载评论
-			fetch('POST','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/detail/'+this.$route.params.id+'/comment')
+			fetch('POST','detail/'+this.$route.params.id+'/comment')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.comment=response.data.data;
@@ -93,7 +93,7 @@
 				this.comment.comment.push(requestData);
 				this.commentText=null;//提交评论后清空input
 
-/*				fetch('POST','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/detail/'+this.$route.params.id+'/comment')
+/*				fetch('POST','detail/'+this.$route.params.id+'/comment')
 				.then((response)=>{
 					console.log(response.data.data)
 					this.comment=response.data.data;

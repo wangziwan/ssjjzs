@@ -26,7 +26,7 @@
 			}
 		},
 		mounted(){
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/battleTeam')
+			fetch('GET','battleTeam')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.items=response.data.data;

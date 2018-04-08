@@ -64,21 +64,21 @@ import {fetch} from '../../config/fetch.js'
 			}
 		},
 		mounted(){
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/saishi/battle_team/'+this.$route.params.id)
+			fetch('GET','saishi/battle_team/'+this.$route.params.id)
 			.then((response)=>{
 				this.team=response.data.data;
 			})
 			.then((reject)=>{
 				console.log(reject);
 			}),
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/saishi/members/'+this.$route.params.id)
+			fetch('GET','saishi/members/'+this.$route.params.id)
 			.then((response)=>{
 				this.members=response.data.data;
 			})
 			.then((reject)=>{
 				console.log(reject);
 			}),
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/saishi/achievement/'+this.$route.params.id)
+			fetch('GET','saishi/achievement/'+this.$route.params.id)
 			.then((response)=>{
 				this.achievements=response.data.data;
 			})

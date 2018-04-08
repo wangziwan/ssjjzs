@@ -25,7 +25,7 @@
 		},
 		methods:{
 			getNovelList(){
-				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/novelList/'+this.$route.params.id)
+				fetch('GET','novelList/'+this.$route.params.id)
 				.then((response)=>{
 					this.items=response.data.data;
 				})
