@@ -19,14 +19,13 @@
 			return {
 				title:'我的收藏',
 				option:[],
-				contents:[],
 			}
 		},
 		mounted(){
 			console.log(1111,this.contents);
 			if(this.contents==false){
 							//资讯内容加载
-				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
+				fetch('GET','zuixinContent')
 				.then((response)=>{
 					this.option=response.data.data;
 					this.contents=response.data.data;

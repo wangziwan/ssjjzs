@@ -51,12 +51,12 @@
 			}
 		},
 		mounted(){
-			fetch('POST','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/myRank')
+			fetch('POST','myRank')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.myInfo=response.data.data;
 			}),
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/rank')
+			fetch('GET','rank')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.rank=response.data.data;

@@ -107,7 +107,7 @@
 		},
 		created(){
 			//轮播图数据
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/slide')
+			fetch('GET','slide')
 			.then((response)=>{
 				this.option.slideArr=response.data.data;
 			})
@@ -115,7 +115,7 @@
 				console.log(response);
 			}),
 			//资讯内容加载
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
+			fetch('GET','zuixinContent')
 			.then((response)=>{
 				this.contents=response.data.data;
 			})
@@ -132,7 +132,7 @@
 					return;
 				}
 				this.preventRepeatReuqest=true;
-				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zuixinContent')
+				fetch('GET','zuixinContent')
 				.then((response)=>{
 					this.contents.push(...response.data.data);
 					this.preventRepeatReuqest=false;

@@ -38,7 +38,7 @@
 		},
 		mounted(){
 			//加载角色列表
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zhanchang/character')
+			fetch('GET','zhanchang/map')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.items=response.data.data;
@@ -60,7 +60,7 @@
 			},
 			choose(id,index){
 				this.typesActiveId=index;
-				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/zhanchang/character',{id:id})
+				fetch('GET','zhanchang/map',{id:id})
 				.then((response)=>{
 					console.log(response.data.data)
 					this.items=response.data.data;

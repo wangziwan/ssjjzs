@@ -47,7 +47,7 @@ import childTitle from '../../components/childTitle'
 			}
 		},
 		mounted(){
-			fetch('GET',`https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/strategy/${this.strategyStatus}`)
+			fetch('GET','strategy/'+this.strategyStatus)
 			.then((response)=>{
 				this.options['strategy'+this.strategyStatus]=response.data.data;
 			})
@@ -68,7 +68,7 @@ import childTitle from '../../components/childTitle'
         	tab_getData(index){
         		this.RECORD_STRATEGYSTATUS(index);
         		if(this.options['strategy'+index]==false){
-        			fetch('GET',`https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/strategy/${index}`)
+        			fetch('GET','strategy/'+index)
 					.then((response)=>{
 						this.options['strategy'+index]=response.data.data;
 					})

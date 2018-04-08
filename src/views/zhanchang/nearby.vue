@@ -33,7 +33,7 @@
 			}
 		},
 		mounted(){
-			fetch('GET',`https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/nearby`)
+			fetch('GET','nearby')
 			.then((response)=>{
 				this.contents=response.data.data;
 			})
@@ -50,7 +50,7 @@
 					return;
 				}
 				this.preventRepeatReuqest=true;
-				fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/nearby')
+				fetch('GET','nearby')
 				.then((response)=>{
 					this.contents.push(...response.data.data);
 					this.preventRepeatReuqest=false;

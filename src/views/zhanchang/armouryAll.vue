@@ -120,7 +120,7 @@ dd{
 		},
 		mounted(){
 			//加载简略武器列表
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/armoury/all')
+			fetch('GET','armoury/all')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.items=response.data.data;

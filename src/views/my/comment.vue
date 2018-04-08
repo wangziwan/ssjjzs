@@ -149,7 +149,7 @@
 		mounted(){
 			
 			//加载评论
-			fetch('get','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/me/comments')
+			fetch('get','me/comments')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.contents=response.data.data;

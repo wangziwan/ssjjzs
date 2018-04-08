@@ -21,7 +21,7 @@
 		},
 		mounted(){
 			//加载资讯内容
-			fetch('GET','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/comic/'+this.$route.params.id+'/'+this.$route.params.chapterId)
+			fetch('GET','comic/'+this.$route.params.id+'/'+this.$route.params.chapterId)
 			.then((response)=>{
 				this.items=response.data.data;
 			})

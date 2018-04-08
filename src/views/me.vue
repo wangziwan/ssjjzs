@@ -1,5 +1,5 @@
 <template>
-	<div class="rank">
+	<div class="me">
 		<header>
 			<a class="iconfont icon-back" @click="gotoBack"></a>
 			<h1>我的</h1>
@@ -58,7 +58,7 @@
 			...mapState(['userInfo'])
 		},
 		mounted(){
-			fetch('POST','https://www.easy-mock.com/mock/5a68269de91af545282b6be8/example/myRank')
+			fetch('POST','myRank')
 			.then((response)=>{
 				console.log(response.data.data)
 				this.myInfo=response.data.data;
@@ -69,7 +69,16 @@
 				this.$router.go(-1);
 			},
 			gotoAddress(path){
-				this.$router.push(path);
+				if(/setting/i.test(path.path)){
+					this.$router.push(path);
+				}else{
+					if(this.userInfo.loginStatus){
+						this.$router.push(path);
+					}else{
+						this.$router.push({path:'/login'})
+					}
+				}
+				
 			}
 		}
 	}
@@ -81,7 +90,7 @@
 		height:@line;
 		border-radius:@line/2;
 	}
-	.rank{
+	.me{
 		width:100%;
 		& .info{
 			width:100%;

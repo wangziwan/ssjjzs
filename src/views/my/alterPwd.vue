@@ -41,11 +41,6 @@
 			},
 			confirm(){
 				//表单提交
-				var name=document.querySelector('input').value;
-				if(!!name){
-					console.log(name);
-					this.$router.go(-1);
-				}
 			}
 		}
 	}
