@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import SvgIcon from './components/svg-icon/SvgIcon.vue';
 import foot from './components/foot'
 export default {
   name: 'App',
