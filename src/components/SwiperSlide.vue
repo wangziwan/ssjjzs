@@ -16,6 +16,7 @@
   import '../../static/plugins/swiper/css/swiper.min.css';
   import swiper from '../../static/plugins/swiper/js/swiper.min.js';
   export default {
+    name:'swiper-slider',
   	props:{
   		options:{
   			baseUrl:{

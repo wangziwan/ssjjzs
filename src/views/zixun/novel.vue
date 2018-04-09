@@ -16,11 +16,11 @@
 				option:{
 					baseUrl:"/zixun/novel/",
 					slideArr:[{
-						image:"../../../static/images/novel1.jpg",
+						imgUrl:"../../../static/images/novel1.jpg",
 						title:"死神游戏之生死狙击1",
 						id:1,
 					},{
-						image:"../../../static/images/novel2.jpg",
+						imgUrl:"../../../static/images/novel2.jpg",
 						title:"死神游戏之生死狙击2",
 						id:2,
 					}],
