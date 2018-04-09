@@ -2,7 +2,7 @@
 > A SSJJ Project
 
 ## 技术栈
-vue2 + vuex + vue-router + webpack + ES6/7 + axios + sass + flex + esay-mock
+vue2 + vuex + vue-router + webpack + ES6/7 + axios + less + flex + esay-mock
 
 ## 项目运行
 
