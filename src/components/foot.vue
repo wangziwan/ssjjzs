@@ -15,28 +15,28 @@
 			return {
 				items:[{
 					url:'/zixun',
-					icon_hov_src:'../../static/images/footer_icon_hov_zx.png',
-					icon_src:'../../static/images/footer_icon_zx.png',
+					icon_hov_src:'static/images/footer_icon_hov_zx.png',
+					icon_src:'static/images/footer_icon_zx.png',
 					title:'资讯'
 				},{
 					url:'/zhanchang',
-					icon_hov_src:'../../static/images/footer_icon_hov_zc.png',
-					icon_src:'../../static/images/footer_icon_zc.png',
+					icon_hov_src:'static/images/footer_icon_hov_zc.png',
+					icon_src:'static/images/footer_icon_zc.png',
 					title:'战场'
 				},{
 					url:'/saishi',
-					icon_hov_src:'../../static/images/footer_icon_hov_ss.png',
-					icon_src:'../../static/images/footer_icon_ss.png',
+					icon_hov_src:'static/images/footer_icon_hov_ss.png',
+					icon_src:'static/images/footer_icon_ss.png',
 					title:'赛事'
 				},{
 					url:'/zhibo',
-					icon_hov_src:'../../static/images/footer_icon_hov_zb.png',
-					icon_src:'../../static/images/footer_icon_zb.png',
+					icon_hov_src:'static/images/footer_icon_hov_zb.png',
+					icon_src:'static/images/footer_icon_zb.png',
 					title:'直播'
 				},{
 					url:'/me',
-					icon_hov_src:'../../static/images/footer_icon_hov_wd.png',
-					icon_src:'../../static/images/footer_icon_wd.png',
+					icon_hov_src:'static/images/footer_icon_hov_wd.png',
+					icon_src:'static/images/footer_icon_wd.png',
 					title:'我的'
 				}],
 				activeId:null

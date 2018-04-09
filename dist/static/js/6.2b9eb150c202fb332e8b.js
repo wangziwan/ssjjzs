@@ -1,2 +1,0 @@
-webpackJsonp([6],{"J/IP":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={name:"Ss",components:{foot:n("7y/R").a}},o={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("h1",[this._v("ss")]),this._v(" "),t("foot")],1)},staticRenderFns:[]},r=n("VU/8")(s,o,!1,null,null,null);t.default=r.exports}});
-//# sourceMappingURL=6.2b9eb150c202fb332e8b.js.map

@@ -74,7 +74,7 @@ module.exports = {
         exclude: [resolve('src/components/svg-icon')], // 避免 url-loader 重复处理该文件夹下的内容
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('images/[name].[hash:7].[ext]')
         }
       },
       {

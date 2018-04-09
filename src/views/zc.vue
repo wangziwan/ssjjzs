@@ -104,41 +104,41 @@
 			return {
 				items:{
 					datum:[{
-						icon:'../../static/images/zhanchang/icon_armoury.png',
+						icon:'static/images/zhanchang/icon_armoury.png',
 						title:'枪械库',
 						url:'/zhanchang/armoury'
 					},{
-						icon:'../../static/images/zhanchang/icon_character.png',
+						icon:'static/images/zhanchang/icon_character.png',
 						title:'角色',
 						url:'/zhanchang/character'
 					},{
-						icon:'../../static/images/zhanchang/icon_map.png',
+						icon:'static/images/zhanchang/icon_map.png',
 						title:'地图',
 						url:'/zhanchang/map'
 					},{
-						icon:'../../static/images/zhanchang/icon_strategy.png',
+						icon:'static/images/zhanchang/icon_strategy.png',
 						title:'游戏攻略',
 						url:'/zhanchang/strategy'
 					}],
 					battleFriend:[{
-						icon:'../../static/images/zhanchang/icon_rank.png',
+						icon:'static/images/zhanchang/icon_rank.png',
 						title:'天梯排行',
 						url:'/zhanchang/rank'
 					},{
-						icon:'../../static/images/zhanchang/icon_forum.png',
+						icon:'static/images/zhanchang/icon_forum.png',
 						title:'官方论坛',
 						/*url:'/zhanchang/forum'*/
 					},{
-						icon:'../../static/images/zhanchang/icon_nearby.png',
+						icon:'static/images/zhanchang/icon_nearby.png',
 						title:'附近战友',
 						url:'/zhanchang/nearby'
 					}],
 					intoGame:[{
-						icon:'../../static/images/zhanchang/icon_download.png',
+						icon:'static/images/zhanchang/icon_download.png',
 						title:'游戏下载',
 						/*url:'/zhanchang/download'*/
 					},{
-						icon:'../../static/images/zhanchang/icon_activity.png',
+						icon:'static/images/zhanchang/icon_activity.png',
 						title:'游戏活动',
 						url:'/zhanchang/activity'
 					}]
