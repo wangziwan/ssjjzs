@@ -11,14 +11,14 @@ export default {
   data () {
     return {
       msg: '欢迎来到生死狙击小助手开源项目',
-      time:3
+      time:4
     }
   },
   mounted(){
     this.showFootFuc();
     this.timeLoad();
     if(flag) clearTimeout(flag);
-    var flag = setTimeout(this.gotoIndex,3000);
+    var flag = setTimeout(this.gotoIndex,4000);
   },
   methods:{
     ...mapMutations(['SHOWFOOT']),
