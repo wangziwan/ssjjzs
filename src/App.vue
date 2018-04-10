@@ -1,9 +1,6 @@
 
 <template>
   <div id="app1">
-<!--     <svg class="icon-all">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-all"></use>
-    </svg> -->
     <transition name="router-fade" mode="out-in">
         <keep-alive>
             <router-view v-if="$route.meta.keepAlive"></router-view>

@@ -13,20 +13,16 @@ export default {
       msg: '欢迎来到生死狙击小助手开源项目'
     }
   },
+  mounted(){
+    setTimeout(this.gotoIndex,3000)
+  },
   methods:{
     gotoIndex:function(){
-      console.log('gotoIndex')
+      this.$router.push('/zixun');
     }
   }
 }
 
-//function gotoIndex(argument) {
-  //console.log('gotoIndex',history);
-  //history.go('zixun')
-
-//}
-
-//setTimeout(gotoIndex,1000)
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

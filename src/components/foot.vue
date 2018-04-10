@@ -13,6 +13,7 @@
 	export default {
 		data(){
 			return {
+				activeId:0,
 				items:[{
 					url:'/zixun',
 					icon_hov_src:'static/images/footer_icon_hov_zx.png',
@@ -55,13 +56,27 @@
 		methods: {
         	gotoAddress(path,index){
         		this.$router.push(path);
-        		this.activeId=index;
+        		var path = this.$route.path;
+        		this.activeId = index;
         	}
         },
         mounted(){
-        	this.activeId=0;
+        	var path = this.$route.path;
+        	if(path.indexOf('zixun') != -1) {
+        		this.activeId = 0;
+        	} else if(path.indexOf('zhanchang') != -1) {
+        		this.activeId = 1;
+        	} else if(path.indexOf('saishi') != -1) {
+        		this.activeId = 2;
+        	} else if(path.indexOf('zhibo') != -1) {
+        		this.activeId = 3;
+        	} else if(path.indexOf('me') != -1) {
+        		this.activeId = 4;
+        	}
+        	console.log(':' + this.activeId)
         }
 	}
+
 </script>
 <style scoped>
 	.footer{
