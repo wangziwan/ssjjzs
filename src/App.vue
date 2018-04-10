@@ -10,7 +10,7 @@
     <transition name="router-fade" mode="out-in">
         <router-view v-if="!$route.meta.keepAlive"></router-view>
     </transition>
-    <foot></foot>
+    <foot v-show="showFootFlag"></foot>
   </div>
 </template>
 
@@ -26,7 +26,15 @@ export default {
     return {
     }
   },
+  computed:{
+    showFootFlag(){
+      return this.$store.state.showFoot
+    }
+  },
   mounted(){
+    
+  },
+  methods:{
   }
 }
 </script>

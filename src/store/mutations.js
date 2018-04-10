@@ -4,7 +4,8 @@ import {
 	RECORD_SAISHISTATUS,
 	RECORD_ZHIBOSTATUS,
 	ALTER_NICKNAME,
-	ALTER_TEL
+	ALTER_TEL,
+	SHOWFOOT
 }from './mutation-types.js';
 export default {
 	[RECORD_ZIXUNSTATUS](state,playload){
@@ -24,5 +25,8 @@ export default {
 	},
 	[ALTER_TEL](state,playload){
 		state.userInfo.tel=playload;
+	},
+	[SHOWFOOT](state,playload){
+		state.showFoot=playload;
 	}
 }
