@@ -16,11 +16,11 @@
 				option:{
 					baseUrl:"/zixun/comic/",
 					slideArr:[{
-						image:"../../../static/images/novel1.jpg",
+						imgUrl:"static/images/novel1.jpg",
 						title:"生死狙击漫画1",
 						id:1,
 					},{
-						image:"../../../static/images/novel2.jpg",
+						imgUrl:"static/images/novel2.jpg",
 						title:"生死狙击漫画2",
 						id:2,
 					}],

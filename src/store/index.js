@@ -21,6 +21,7 @@ const state={
 	strategyStatus:0,
 	saishiStatus:0,
 	zhiboStatus:0,
+	showFoot:true
 }
 export default new Vuex.Store({
 	state,

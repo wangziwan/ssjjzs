@@ -3,7 +3,7 @@
 	    <ul class="swiper-wrapper">
 	      <li class="swiper-slide" v-for="item in options.slideArr">
 	      	<a @click="gotoAddress({path:`${options.baseUrl}${item.id}`})">
-	      		<img :src="item.image" alt="">
+	      		<img :src="item.imgUrl" alt="">
 	      		<p>{{item.title}}</p>
 	      	</a>
 	      </li>
@@ -16,6 +16,7 @@
   import '../../static/plugins/swiper/css/swiper.min.css';
   import swiper from '../../static/plugins/swiper/js/swiper.min.js';
   export default {
+    name:'swiper-slider',
   	props:{
   		options:{
   			baseUrl:{
