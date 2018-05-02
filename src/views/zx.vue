@@ -35,7 +35,6 @@ import {mapState,mapMutations} from 'vuex';
 			}
 		},
 		mounted(){
-			console.log(this.zixunStatus);
 			this.$router.push(this.items[this.zixunStatus].url);
 		},
 		computed:{

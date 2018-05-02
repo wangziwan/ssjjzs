@@ -72,7 +72,6 @@
         	} else if(path.indexOf('me') != -1) {
         		this.activeId = 4;
         	}
-        	console.log(':' + this.activeId)
         }
 	}
 
