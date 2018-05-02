@@ -20,7 +20,7 @@ export default{
 	mounted(){
 		fetch('GET','zuixinContent')
 		.then((response)=>{
-			this.options=response.data.data;
+			this.options=response.data;
 		})
 		.catch((response)=>{
 			console.log(response);
