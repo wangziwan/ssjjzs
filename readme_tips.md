@@ -14,19 +14,25 @@ xxxxx
 xxxxx
 
 ## <keep-alive>  $route.meta.keepAlive      => App.vue
+xxxx
 
 ## <transition name="router-fade" mode="out-in">      => App.vue
+xxxx
 
 ## svgIcon     => App.vue
+xxxx
 
 ## fetch axios
 xxxxx
 
 ## promise
+xxxx
 
 ## scss 
+xxxx
 
 ## 大概念 ES6
+xxxx
 
 ## 大概念 vue-router VueRouter router routes 
 xxxx
