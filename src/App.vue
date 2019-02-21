@@ -16,7 +16,7 @@
 
 <script>
 import SvgIcon from './components/svg-icon/SvgIcon.vue';
-import foot from './components/foot'
+import foot from './components/foot';
 export default {
   name: 'App',
   components:{
@@ -39,14 +39,14 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less">
+a:hover{text-decoration:none;}
 #app1 {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-/*  text-align: center;*/
-  color: #2c3e50;
-
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center;*/
+    color: #2c3e50;
 }
+
 </style>

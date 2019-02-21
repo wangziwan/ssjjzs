@@ -69,7 +69,7 @@
 						display:block;
 						width:100%;
 						& img{
-							width:auto;
+							width:1.25rem;
 							display:block;
 							margin: 0 auto;
 						}

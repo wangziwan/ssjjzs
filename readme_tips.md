@@ -1,6 +1,14 @@
 ## import lib-flexible
-xxxx
-
+### 实现原理:
+1、通过屏幕的独立像素和设备的devicePixelRatio来动态改变html的font-size基准值<br/>
+2、高倍屏下动态改变<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+### 解决痛点:
+1、文本font-size问题<br/>
+解：根据不同的dpr来设置不同的字体大小<br/>
+2、背景图css-sprite<br/>
+解：设置background-size值（以rem为单位）<br/>
+3、1px问题<br/>
+解：高倍屏下直接设置1px即可（因为已经通过meta标签进行缩放了），安卓端粗略写法可以通过transform: scaleY(0.5)来解决
 ## import fastclick
 xxxxx
 
