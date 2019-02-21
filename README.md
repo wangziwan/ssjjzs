@@ -41,7 +41,7 @@ npm run build
 >如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR +1
 
 #### 项目截图
-待添加
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/1.jpg)
 
 #### 项目演示二维码
 待添加
