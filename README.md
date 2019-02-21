@@ -52,11 +52,17 @@ npm run build
 
 #### 项目文件结构
 build // webpack配置文件
+
 config // 项目打包路径
+
 dist  // 上线项目文件，放在服务器即可正常访问
+
 screenshots  // 项目截图
-├── src   // 源码目录
+
+src   // 源码目录
+
 static //静态资源 cdn
+
 test //单元测试
 
 #### 总结
