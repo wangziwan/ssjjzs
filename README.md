@@ -40,11 +40,8 @@ npm run build
 
 >如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR +1
 
-#### 项目截图
-![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/1.jpg)
-
 #### 项目演示二维码
-待添加
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/ewm.jpg)
 
 #### 项目功能说明
 待添加
@@ -54,3 +51,11 @@ npm run build
 
 #### 总结
 待添加
+
+#### 项目截图
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/1.jpg)
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/2.jpg)
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/3.jpg)
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/4.jpg)
+![avatar](https://github.com/wangziwan/ssjjzs/blob/master/screenshot/5.jpg)
+
