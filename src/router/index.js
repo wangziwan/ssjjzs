@@ -58,7 +58,7 @@ export default [{
     children:[
       {
         path: '',
-        component: helloWorld
+        component: zixun
       },{
         path: 'detail/:id',
         component: detail

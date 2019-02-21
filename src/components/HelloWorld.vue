@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       msg: '欢迎来到生死狙击小助手开源项目',
-      time:4
+      time:2
     }
   },
   mounted(){
