@@ -1,5 +1,5 @@
 # 生死狙击助手项目
-> A SSJJ Project
+> 本开源项目目的在于学习VUE全家桶，webpack，ES6最新语法
 
 ## 技术栈
 vue2 + vuex + vue-router + webpack + ES6/7 + axios + less + flex + esay-mock
