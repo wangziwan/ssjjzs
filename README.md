@@ -25,6 +25,8 @@ npm run dev
 #### 线上版本
 ```bash
 npm run build
+
+生成的dist文件夹放在服务器即可正常访问
 ````
 
 #### 说明
